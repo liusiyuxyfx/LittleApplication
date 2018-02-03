@@ -39,6 +39,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20">报</Label>
             <Label Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold">表</Label>
@@ -49,9 +50,13 @@
             <Label Grid.Column="0" Grid.Row="5"  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" >预收账款</Label>
             <Label Grid.Column="0" Grid.Row="6"  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" >主营收入</Label>
             <Label Grid.Column="0" Grid.Row="7"  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" >主营成本</Label>
-            <Label Grid.Column="0" Grid.Row="8"  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" >净利润</Label>
+                <Label Grid.Column="0" Grid.Row="8"  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" >利润总额</Label>
             <Label Grid.Column="0" Grid.Row="9"  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" >存货</Label>
-            <Label Grid.Column="0" Grid.Row="11"  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" >计划实现销售收入</Label>
+            <Label Grid.Column="0" Grid.Row="10"  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" >选择年份</Label>
+                <Button Grid.Column="1" Grid.Row="10" Click="Button_Click">选择本栏</Button>
+                <Button Grid.Column="2" Grid.Row="10" Click="Button_Click_1">选择本栏</Button>
+                <Button Grid.Column="3" Grid.Row="10" Click="Button_Click_2">选择本栏</Button>
+                <Label Grid.Column="0" Grid.Row="11"  FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" >计划实现销售收入</Label>
             <Label Grid.Column="2" Grid.Row="11" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">现有流动资金贷款</Label>
             <Label Grid.Column="0" Grid.Row="13" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">其他渠道提供资金</Label>
             <Label Grid.Column="2" Grid.Row="13" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">目标额度</Label>
@@ -331,7 +336,7 @@
             <Button Grid.Row="6" Grid.Column="5" x:Name="bt_ndAccountReceivableTT_d0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="9" Click="bt_ndAccountReceivableTT_d0_Click"  >下调0.01</Button>
             <Button Grid.Row="6" Grid.Column="6" x:Name="bt_ndAccountReceivableTT_d1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="9" Click="bt_ndAccountReceivableTT_d1_Click"  >下调0.1</Button>
             <Button Grid.Row="6" Grid.Column="7" x:Name="bt_ndAccountReceivableTT_d10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="9" Click="bt_ndAccountReceivableTT_d10_Click"  >下调1</Button>
-            <Button Grid.Row="6" Grid.Column="8" x:Name="bt_ndAccountReceivableTT_bc" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="9" Margin="20,5.2,19.2,0" Click="bt_ndAccountReceivableTT_bc_Click"  >恢复原值</Button>
+                <Button Grid.Row="6" Grid.Column="8" x:Name="bt_ndAccountReceivableTT_bc" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="9" Click="bt_ndAccountReceivableTT_bc_Click"  >恢复原值</Button>
             <Label Grid.Row="6" Grid.Column="9" x:Name="lbl_ndAccountReceivableTT_or" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="9"></Label>
             <Label Grid.Row="6" Grid.Column="10" x:Name="lbl_ndAccountReceivableTT_av" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="9">上调</Label>
 

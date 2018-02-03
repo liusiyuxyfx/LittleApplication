@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanCalculator", "LoanCalculator\LoanCalculator.csproj", "{44E251B4-9C7E-4653-9159-08C893E5AF7A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LoanInstaller", "LoanInstaller\LoanInstaller.vdproj", "{5688FE9D-BC2F-4DC2-B629-F4F876C7AB75}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LoanCalculatorSetup", "LoanCalculatorSetup\LoanCalculatorSetup.vdproj", "{2BB4F740-E9ED-4789-820D-14FD150CB537}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{44E251B4-9C7E-4653-9159-08C893E5AF7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44E251B4-9C7E-4653-9159-08C893E5AF7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44E251B4-9C7E-4653-9159-08C893E5AF7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5688FE9D-BC2F-4DC2-B629-F4F876C7AB75}.Debug|Any CPU.ActiveCfg = Debug
-		{5688FE9D-BC2F-4DC2-B629-F4F876C7AB75}.Release|Any CPU.ActiveCfg = Release
+		{2BB4F740-E9ED-4789-820D-14FD150CB537}.Debug|Any CPU.ActiveCfg = Debug
+		{2BB4F740-E9ED-4789-820D-14FD150CB537}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,6 +8,7 @@ namespace LoanCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int Choose;
         public AnnualReport P, N, D;
         double pntmp_InventoryTT;
         double pntmp_AccountPayableTT;
@@ -1489,6 +1490,43 @@ namespace LoanCalculator
             getFinalReport(ndc);
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Choose = 1;
+                MessageBox.Show("已选择" + txt_P_year.Text + "进行计算", "提醒", MessageBoxButton.OK);
+            } catch(NullReferenceException e2)
+            {
+                MessageBox.Show("请先输入报告", "异常", MessageBoxButton.OK);
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Choose = 2;
+                MessageBox.Show("已选择" + txt_N_year.Text + "进行计算", "提醒", MessageBoxButton.OK);
+            }
+            catch (NullReferenceException e2)
+            {
+                MessageBox.Show("请先输入报告", "异常", MessageBoxButton.OK);
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Choose = 3;
+                MessageBox.Show("已选择" + txt_D_year.Text + "进行计算", "提醒", MessageBoxButton.OK);
+            }
+            catch (NullReferenceException e2)
+            {
+                MessageBox.Show("请先输入报告", "异常", MessageBoxButton.OK);
+            }
+        }
 
         private void bt_GetpnReport_Click(object sender, RoutedEventArgs e)
         {
@@ -1545,6 +1583,7 @@ namespace LoanCalculator
             D = new AnnualReport();
             pnc = new Calculator();
             ndc = new Calculator();
+            Choose = 2;
         }
 
 
@@ -1599,8 +1638,8 @@ namespace LoanCalculator
             txt_ExpectedIncome.Text = "34500";
             txt_NowMoneyStream.Text = "10873";
             txt_OtherMoneyStream.Text = "0";
-            txt_CurrentAssests.Text = "0";
-            txt_CurrentLiability.Text = "0";
+            txt_CurrentAssests.Text = "1000";
+            txt_CurrentLiability.Text = "400";
             txt_Target.Text = "300";
         }
         
@@ -1608,7 +1647,7 @@ namespace LoanCalculator
         {
             try
             {
-                
+                //test();
                 P.year = txt_P_year.Text;
                 N.year = txt_N_year.Text;
                 D.year = txt_D_year.Text;
@@ -1658,8 +1697,21 @@ namespace LoanCalculator
                 this.CurrentLiability = double.Parse(txt_CurrentLiability.Text);
                 this.CustAmmount = this.CurrentAssests - this.CurrentLiability;
 
-                pnc.GetReport(P, N, N, N);
-                ndc.GetReport(N, D, N, N);
+                
+                if (Choose == 1)
+                {
+                    pnc.GetReport(P, N, P, P);
+                    ndc.GetReport(N, D, P, P);
+                } else if (Choose == 2)
+                {
+                    pnc.GetReport(P, N, N, N);
+                    ndc.GetReport(N, D, N, N);
+                } else if (Choose == 3)
+                {
+                    pnc.GetReport(P, N, D, D);
+                    ndc.GetReport(N, D, D, D);
+                }
+                
                 pnc.ExpectedIncome = ndc.ExpectedIncome = this.ExpectedIncome;
                 pnc.NowMoneyStream = ndc.NowMoneyStream = this.NowMoneyStream;
                 pnc.OtherMoneyStream = ndc.OtherMoneyStream = this.OtherMoneyStream;
