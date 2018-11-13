@@ -1,0 +1,30 @@
+create table anuualreport
+(
+  ReportId         varchar(30) not null
+    primary key,
+  ReportName       varchar(30) not null,
+  Sonid            varchar(60) null,
+  ExpectedIncome   double      null,
+  NowMoneyStream   double      null,
+  CurrentAssests   double      null,
+  CurrentLiability double      null,
+  OtherMoneyStream double      null,
+  Target           double      null,
+  Report           longtext    null
+);
+
+create table peryearreport
+(
+  Sonid             varchar(10) not null
+    primary key,
+  Cyear             varchar(20) not null,
+  AccountPayable    double      null,
+  AccountReceivable double      null,
+  AdvancePayment    double      null,
+  AdvanceCollected  double      null,
+  NetRevenues       double      null,
+  CostRevenues      double      null,
+  NetProfit         double      null,
+  Inventory         double      null
+);
+

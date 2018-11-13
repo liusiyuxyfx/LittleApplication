@@ -1546,16 +1546,16 @@ namespace LoanCalculator
                     + cl.AVE_Inventory.ToString() + " = " + cl.InventoryTT.ToString() + ", 存货周转天数 = 360 / "
                     + cl.InventoryTT.ToString() + " = " + cl.InventoryTD.ToString() + Environment.NewLine;
                 txt_FinalReport.Text += "预收账款周转次数 = 营业收入 / 平均预收账款余额 = " + cl.D.NetRevenues.ToString() + " / "
-                    + cl.AVE_AdvanceCollected.ToString() + " = " + cl.AdvanceCollectedTT.ToString() + ", 预付账款周转天数 = 360 / "
+                    + cl.AVE_AdvanceCollected.ToString() + " = " + cl.AdvanceCollectedTT.ToString() + ", 预收账款周转天数 = 360 / "
                     + cl.AdvanceCollectedTT.ToString() + " = " + cl.AdvanceCollectedTD.ToString() + Environment.NewLine;
                 txt_FinalReport.Text += "预付账款周转次数 = 营业成本 / 平均预付账款余额 = " + cl.D.CostRevenues.ToString() + " / "
                     + cl.AVE_AdvancePayment.ToString() + " = " + cl.AdvancePaymentTT.ToString() + ", 预付账款周转天数 = 360 / "
                     + cl.AdvancePaymentTT.ToString() + " = " + cl.AdvancePaymentTD.ToString() + Environment.NewLine;
                 txt_FinalReport.Text += "应付账款周转次数 = 销售成本 / 平均应付账款余额 = " + cl.D.CostRevenues.ToString() + " / "
-                    + cl.AVE_AccountPayable.ToString() + " = " + cl.AccountPayableTT.ToString() + ", 预付账款周转天数 = 360 / "
+                    + cl.AVE_AccountPayable.ToString() + " = " + cl.AccountPayableTT.ToString() + ", 应付账款周转天数 = 360 / "
                     + cl.AccountPayableTT.ToString() + " = " + cl.AccountPayableTD.ToString() + Environment.NewLine;
                 txt_FinalReport.Text += "应收账款周转次数 = 营业收入 / 平均应收账款余额 = " + cl.D.NetRevenues.ToString() + " / "
-                    + cl.AVE_AccountReceivable.ToString() + " = " + cl.AccountReceivableTT.ToString() + ", 预付账款周转天数 = 360 / "
+                    + cl.AVE_AccountReceivable.ToString() + " = " + cl.AccountReceivableTT.ToString() + ", 应收账款周转天数 = 360 / "
                     + cl.AccountReceivableTT.ToString() + " = " + cl.AccountReceivableTD.ToString() + Environment.NewLine;
                 txt_FinalReport.Text += "营运资金周转次数 = 360 / (存货周转天数 + 应收账款周转天数 -应付账款周转天数 + 预付账款周转天数 - 预收账款周转天数）= 360 /（"
                     + cl.InventoryTD.ToString() + " + " + cl.AccountReceivableTD.ToString() + " - " + cl.AccountPayableTD.ToString()
@@ -1647,7 +1647,7 @@ namespace LoanCalculator
         {
             try
             {
-                //test();
+                test();
                 P.year = txt_P_year.Text;
                 N.year = txt_N_year.Text;
                 D.year = txt_D_year.Text;
